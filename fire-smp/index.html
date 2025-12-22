@@ -1,2 +1,136 @@
-<h1>Fire SMP</h1>
-<p>A small Minecraft Server for my friends.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireSMP | Setup Guides</title>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --primary-gradient: linear-gradient(135deg, #ff4e50, #f9d423);
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+            --accent-orange: #ff8c00;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 80px 20px;
+            text-align: center;
+            background: var(--primary-gradient);
+            margin-bottom: 60px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #000;
+            font-weight: 900;
+        }
+
+        header p {
+            color: #000;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .selection-container {
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            background-color: var(--card-bg);
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .selection-container h2 {
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+            font-size: 1.8rem;
+        }
+
+        .guide-btn {
+            display: block;
+            padding: 20px;
+            background: var(--primary-gradient);
+            color: #000;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 800;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .guide-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 78, 80, 0.5);
+        }
+
+        .guide-btn span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FireSMP</h1>
+        <p>A small Minecraft server for my friends.</p>
+    </header>
+
+    <div class="selection-container">
+        <h2>Choose Your Platform</h2>
+        
+        <a href="https://alexmtc765.github.io/fire-smp/macos.html" class="guide-btn">
+            macOS Guide
+            <span>For MacBook, iMac, and Mac Mini</span>
+        </a>
+
+        <a href="https://alexmtc765.github.io/fire-smp/windows.html" class="guide-btn">
+            Windows Guide
+            <span>For PC and Laptops</span>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2025 FireSMP.
+    </footer>
+
+</body>
+</html>
