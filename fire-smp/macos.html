@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireSMP | MacOS Setup Guide</title>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --primary-gradient: linear-gradient(135deg, #ff4e50, #f9d423);
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+            --accent-orange: #ff8c00;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 60px 20px;
+            text-align: center;
+            background: var(--primary-gradient);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #000;
+        }
+
+        header p {
+            color: #000;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding-bottom: 100px;
+        }
+
+        .step {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: #000;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--accent-orange);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+        }
+
+        img, video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 20px 0;
+            border: none; /* Explicitly removing borders as requested */
+            outline: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary-gradient);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 10px 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 78, 80, 0.4);
+        }
+
+        .important-note {
+            border-left: 4px solid #ff4e50;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            background: rgba(255, 78, 80, 0.1);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        code {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #ff8c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .external-link {
+            color: #ff4e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FireSMP</h1>
+        <p>MacOS Installation & Setup Guide</p>
+    </header>
+
+    <div class="container">
+
+        <div class="step">
+            <span class="step-number">STEP 1</span>
+            <h2>Download Modrinth</h2>
+            <p>Go to this download: <a href="https://modrinth.com/app" class="btn" target="_blank">Modrinth Website</a></p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708258866401401/1-Modrinth-Download.png?ex=694acb7e&is=694979fe&hm=6bc3621930082378869a6e73ecfc2dd222493775598efbbf0c8d307590112a04&=&format=webp&quality=lossless&width=1111&height=1368" alt="Modrinth Download Page">
+            <p>Click the <strong>"Download Modrinth App"</strong> button.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 2</span>
+            <h2>Check Download Progress</h2>
+            <p>You will see the download start in your browser.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708303057453107/2-Modrinth-Downloaded.png?ex=694acb89&is=69497a09&hm=4bcc02b88dda1c52aaeaad7050b0aee13edeef76e6fc4029cafe21d670875266&=&format=webp&quality=lossless&width=1121&height=1368" alt="Download Progress">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 3</span>
+            <h2>Open the Installer</h2>
+            <p>Once the download finishes, open your <strong>Downloads</strong> folder. Find the file named <code>Modrinth App_0.10.23_universal.dmg</code>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708311521558700/3-Downloads-Folder.png?ex=694acb8b&is=69497a0b&hm=f9db0a9a0da722121327a762e15d020371e25382d9f7831466851d0ad1e8092e&=&format=webp&quality=lossless" alt="Downloads Folder">
+            <p>Double-click it to open it.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 4</span>
+            <h2>Install Window</h2>
+            <p>A new window will open up with the Modrinth App icon and an Applications icon.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708325916676277/4-Modrinth-Install.png?ex=694acb8e&is=69497a0e&hm=d210fa64b84bce3304f14b999522e6a1c938357bb2aa47e64b1a01eddf139b64&=&format=webp&quality=lossless" alt="Installation Window">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 5</span>
+            <h2>Drag to Applications</h2>
+            <p>Drag the Modrinth App icon into the Applications folder.</p>
+            <video autoplay loop muted playsinline>
+                <source src="https://cdn.discordapp.com/attachments/1452401374359851208/1452708334682505347/5-Drag-The-File.mov?ex=694acb91&is=69497a11&hm=436060184fee53cffcb883589897250286e2c2bb91457b71bae3a306cabd24ce&" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 6</span>
+            <h2>Launch Modrinth</h2>
+            <p>Close the Modrinth App installation window and launch the Modrinth App from your Applications folder.</p>
+            <video controls>
+                <source src="https://cdn.discordapp.com/attachments/1452401374359851208/1452708350323200132/6-Launch-App.mov?ex=694acb94&is=69497a14&hm=94c223e71456fb35908580bdeb69b305115d108fdbd40f8c162eedcacd6da961&" type="video/quicktime">
+            </video>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 7</span>
+            <h2>Security Warning</h2>
+            <p>When you open the app, it will say: <em>"Modrinth App is an app downloaded from the internet. Are you sure you want to open it?"</em></p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708361756737616/7-App-Warning.png?ex=694acb97&is=69497a17&hm=c7f88f7f0d11eb8d59967f589bd6a9b89ad89af7b11c434436dc2eb0f276491c&=&format=webp&quality=lossless" alt="Security Prompt">
+            <p>Click <strong>Open</strong>.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 8</span>
+            <h2>The Launcher</h2>
+            <p>You will now see the Modrinth App open.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708380832436335/8-Launcher.png?ex=694acb9c&is=69497a1c&hm=6ccc4dc125d1fd84536203b4a7f8e86dc65df91cad7a292a3a1eb8a7ea69a0e6&=&format=webp&quality=lossless&width=1930&height=1264" alt="Main Launcher">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 9-11</span>
+            <h2>Account Sign-In</h2>
+            <p>Look towards the right side; you should see a little Steve head icon.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708399501414471/9-Right-Account-Side.png?ex=694acba0&is=69497a20&hm=43770bcaab7f142d7b97e301f60335aa9d5a9895c417d4548c8cf9e9c495d13c&=&format=webp&quality=lossless&width=1930&height=1264" alt="Account Icon Location">
+            <p>Click it, and a sign-in button should appear. Click the <strong>green sign-in button</strong>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708420632187053/10-Click-Account-Icon.png?ex=694acba5&is=69497a25&hm=53b07286ee7c4ad5ab0cc19280984bd355db28ede4d126a63655643d35e9166e&=&format=webp&quality=lossless&width=1930&height=1264" alt="Sign In Button">
+            <p>A Minecraft Sign-in window will appear.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708426131046621/11-Sign-In-Window.png?ex=694acba6&is=69497a26&hm=abdd408a089f48bf9506e2de75957ad102379c4c1cbd3d452a167038348d0826&=&format=webp&quality=lossless" alt="Microsoft Login">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 12</span>
+            <h2>Logged In</h2>
+            <p>Log in to your Minecraft account. Once logged in, you should see your account name and skin where the Steve head used to be.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708440618041384/12-Signed-In.png?ex=694acbaa&is=69497a2a&hm=b1b00a5c92d2a28d4d9f2600aa44cfc5b45504af353f892181002395938f821d&=&format=webp&quality=lossless&width=1930&height=1264" alt="Successfully Logged In">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 13-14</span>
+            <h2>Create Instance</h2>
+            <p>Click the <strong>plus icon</strong> found on the left side.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708453230313717/13-Click-Plus.png?ex=694acbad&is=69497a2d&hm=88ec9eb025be55c7a66ea544d457c6c1eb5ec1c1d2cf4564e591b079f36d25ca&=&format=webp&quality=lossless&width=1930&height=1264" alt="Plus Icon">
+            <p>It will pop up a menu that says "Creating an Instance." Select <strong>From File</strong>.</p>
+            <div style="text-align: center;">
+                <a href="https://cdn.discordapp.com/attachments/1452401374359851208/1452695730727817226/Fire_SMP_0.0.1.mrpack?ex=694abfd3&is=69496e53&hm=59338820180074a3af02e763076c23d9ed2315f23ad6bb6d5ed318033288f8d1&" class="btn">Download FireSMP Modpack</a>
+            </div>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708459165515786/14-From-File.png?ex=694acbae&is=69497a2e&hm=74556337f285b577b3b34915fc86e848cb05994b1ec46b6862cbea7a9ab2e9da&=&format=webp&quality=lossless&width=1930&height=1264" alt="Import From File">
+            <p>Click the <strong>import from file button</strong>.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 15-18</span>
+            <h2>Importing the Pack</h2>
+            <p>It will open a Finder window. Go to your downloads folder and find the file named <code>Fire SMP 0.0.1.mrpack</code>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708469919584348/15-Find-Modpack.png?ex=694acbb1&is=69497a31&hm=9405cde6834f773d48e2656fc6f48468333ac00225c682638cfcb14293d995cf&=&format=webp&quality=lossless&width=1930&height=1264" alt="Find Modpack">
+            <p>Select it and click <strong>Open</strong>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708479038132427/16-Select-Modpack.png?ex=694acbb3&is=69497a33&hm=68e82339c84a249f083c7c2a57105dc5fedeef121cc7ea573ca7932514bb01dd&=&format=webp&quality=lossless&width=1930&height=1264" alt="Select and Open">
+            <p>You'll see it start to download the FireSMP modpack in the top right corner.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708499736756274/17-Downloading-Pack.png?ex=694acbb8&is=69497a38&hm=6de9de66bc4368e32ec30e2aab6d296855e76f79e82c1de64ca70f3e75ba9d93&=&format=webp&quality=lossless&width=1930&height=1264" alt="Downloading Animation">
+            <p>Once it is done, you will see it listed on the left side.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708510314790953/18-Modpack-Left-Side.png?ex=694acbba&is=69497a3a&hm=2cfbe38563b42d99228976da6919feb933ef87e0e2d4a4560b6c53847a3935e7&=&format=webp&quality=lossless&width=1930&height=1264" alt="Modpack in Library">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 19-21</span>
+            <h2>Launch Minecraft</h2>
+            <p>Click on the modpack, then click the <strong>green play button</strong>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708516602052770/19-Modpack-Play.png?ex=694acbbc&is=69497a3c&hm=a122042172c9ab63fd36a0fc26a3cbd837ce92cc003216565ecad336a610e641&=&format=webp&quality=lossless&width=1930&height=1264" alt="Play Button">
+            <p>The play button will turn red while starting.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708521362718982/20-Modpack-Starting.png?ex=694acbbd&is=69497a3d&hm=188d853d3d4351cb192a31dd95bf607b409fe572745d25b1008e7d461f9a4e86&=&format=webp&quality=lossless&width=1930&height=1264" alt="Starting State">
+            <p>When you get to the main menu, if you see a "mods" button, the mods have been successfully added.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708529348808714/21-MainMenu.png?ex=694acbbf&is=69497a3f&hm=7f8cf8db97173de9133425850d03e5d344599228f778ca6c1002586d2e0e3279&=&format=webp&quality=lossless" alt="Minecraft Main Menu">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 22-23</span>
+            <h2>Join the Server</h2>
+            <p>Go to multiplayer, add FireSMP, and join it.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708536412016730/22-Multiplayer.png?ex=694acbc1&is=69497a41&hm=6d691387e564fe0a155152533b4f886676efca2d37fae139a4fd9a9a0642cd06&=&format=webp&quality=lossless" alt="Multiplayer Menu">
+            <p>When you join, a pop-up will appear asking if <strong>Modrinth</strong> can use your microphone.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708549401510008/23-Allow-Mic.png?ex=694acbc4&is=69497a44&hm=0a382c81b10cef382d5c6fa7f199c9dddc61f8358ffb54e7a17242b327e37318&=&format=webp&quality=lossless&width=1653&height=1264" alt="Microphone Permission">
+            <div class="important-note">
+                Click <strong>Allow</strong>. Your mic will not work if you click "Don't Allow." If you accidentally clicked "Don't Allow," go to <strong>System Settings -> Privacy & Security -> Microphone</strong> and manually enable Modrinth App.
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 24-25</span>
+            <h2>Voice Chat Setup</h2>
+            <p>Once in the server, you'll see a chat message: <em>Simple Voice Chat - Press V to set up</em>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708554468491458/24-V-Setup.png?ex=694acbc5&is=69497a45&hm=686cc9b71b8ba36c263130e5d056e5ba1213c986cb81e8ae407d562e9cffd834&=&format=webp&quality=lossless" alt="Press V message">
+            <p>Press <strong>V</strong> to open the setup menu. Click <strong>Next</strong>.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708566153822453/25-Voice-Chat-Setup.png?ex=694acbc8&is=69497a48&hm=87f699d09cd0ca580a332e23c1317455cd8668a8136bbcf9b202fae4eb417062&=&format=webp&quality=lossless" alt="Setup Menu">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 26</span>
+            <h2>Select Speaker</h2>
+            <p>Choose where you want the voice chat sound to come from (e.g., AirPods instead of MacBook speakers).</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708573175091232/26-Speaker.png?ex=694acbc9&is=69497a49&hm=380642f12f29d9f25bd2b1a7355920611c0a59b775bff6ff02d966c4eb460d75&=&format=webp&quality=lossless" alt="Speaker Selection">
+            <p>I recommend leaving it on <strong>System Default</strong>. Click <strong>Next</strong>.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 27</span>
+            <h2>Select Microphone</h2>
+            <p>Select which microphone to use. I recommend using your <strong>MacBook Microphone</strong> if you want your AirPods to have the best sound quality, or your <strong>AirPods Microphone</strong> if you want to be heard more clearly.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708591864774666/27-Mic.png?ex=694acbce&is=69497a4e&hm=00806e91ce19047972cbd31f636a460605c599b25d573f657e61bc71f034be89&=&format=webp&quality=lossless" alt="Mic Selection">
+            <p>If you can't decide, just use system default. Click <strong>Next</strong>.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 28-29</span>
+            <h2>Activation Method</h2>
+            <p><strong>Voice Activation:</strong> Mic is on whenever you talk.<br><strong>Push to Talk:</strong> You must press a key for people to hear you.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708601679581278/28-Activation.png?ex=694acbd0&is=69497a50&hm=eade8ab1583db8deb76ecb5af62aef62e89271da022950036a4e5aaa9c73a01d&=&format=webp&quality=lossless&width=545&height=350" alt="Activation Method">
+            <p>I recommend <strong>Voice Activation</strong>. Click <strong>Next</strong> through the adjustments unless you know what you are doing.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708610441351300/29-Adjust-Activation.png?ex=694acbd2&is=69497a52&hm=c4ba155461404af934791e3beb2dbdc1e817b3db4eed46a3394822f76bd2d435&=&format=webp&quality=lossless&width=545&height=350" alt="Adjustments">
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 30</span>
+            <h2>Finish Setup</h2>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708618867572941/30-Finish-Setup.png?ex=694acbd4&is=69497a54&hm=94d12e3fd8648c35c90f92e4d24da0c353da1e5ac9b409e7cb1f9214e02ce213&=&format=webp&quality=lossless" alt="Finish Screen">
+            <p>Read what it says on the screen, then click <strong>Finish Setup</strong>.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 31</span>
+            <h2>Unmute Yourself</h2>
+            <p>You will start off muted. You can tell by the mute icon in the bottom left corner.</p>
+            <img src="https://media.discordapp.net/attachments/1452401374359851208/1452708630402170880/31-Muted.png?ex=694acbd7&is=69497a57&hm=e3e6959c31d09ee81bccaee5403c89c60283b5d0f60827ecc6820f6b42aaeb01&=&format=webp&quality=lossless" alt="Muted Icon">
+            <p>Press the <strong>M</strong> key on your keyboard to unmute (or mute again later).</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">STEP 32</span>
+            <h2>Testing</h2>
+            <p>To test if it works, talk! You should see a little mic icon pop up in the bottom left corner whenever you speak.</p>
+            <video controls>
+                <source src="https://cdn.discordapp.com/attachments/1452401374359851208/1452709238915989635/32-Testing.mp4?ex=694acc68&is=69497ae8&hm=4eb33e58cdafd932ab46e9666838849d72359ef5348a97f267a3721f9265046f&" type="video/mp4">
+            </video>
+            <p>To adjust voice chat settings, press <strong>V</strong> at any time.</p>
+        </div>
+
+        <div class="step" style="text-align: center;">
+            <h2>Learn More</h2>
+            <p>If you want to learn more about how to use the voice chat mod, visit the official page:</p>
+            <a href="https://modrinth.com/plugin/simple-voice-chat" class="external-link" target="_blank">Simple Voice Chat on Modrinth</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 FireSMP. All rights reserved.
+    </footer>
+
+</body>
+</html>
